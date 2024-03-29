@@ -18,7 +18,6 @@ export class UserService {
     return this._http.get<SingleUserResponse>(`${this.baseUrl}/${id}`)
     .pipe(
       map(resp => resp.data),
-      tap(console.log),
       );
   }
 
